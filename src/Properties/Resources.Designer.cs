@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ReadWaveformExample.Properties {
+namespace rtb2000_ivi.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace ReadWaveformExample.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ReadWaveformExample.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("rtb2000_ivi.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -57,6 +57,16 @@ namespace ReadWaveformExample.Properties {
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_energisa {
+            get {
+                object obj = ResourceManager.GetObject("logo_energisa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

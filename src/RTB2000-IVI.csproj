@@ -8,8 +8,8 @@
     <ProjectGuid>{84BE929F-E7CA-48F5-B49F-5E71FB17C9C6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ReadWaveformExample</RootNamespace>
-    <AssemblyName>ReadWaveformExample</AssemblyName>
+    <RootNamespace>rtb2000_ivi</RootNamespace>
+    <AssemblyName>rtb2000_ivi</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
@@ -56,16 +56,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RTx_frontPanel.cs">
+    <Compile Include="Connect.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RTx_frontPanel.Designer.cs">
-      <DependentUpon>RTx_frontPanel.cs</DependentUpon>
+    <Compile Include="Connect.Designer.cs">
+      <DependentUpon>Connect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loader.cs" />
+    <Compile Include="SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrontPanel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrontPanel.Designer.cs">
+      <DependentUpon>FrontPanel.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="RTx_frontPanel.resx">
-      <DependentUpon>RTx_frontPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Connect.resx">
+      <DependentUpon>Connect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrontPanel.resx">
+      <DependentUpon>FrontPanel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,9 +93,15 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo_energisa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
